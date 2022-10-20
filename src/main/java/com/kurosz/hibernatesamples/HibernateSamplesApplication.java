@@ -14,4 +14,5 @@ public class HibernateSamplesApplication {
         SpringApplication.run(HibernateSamplesApplication.class);
     }
 
+
 }

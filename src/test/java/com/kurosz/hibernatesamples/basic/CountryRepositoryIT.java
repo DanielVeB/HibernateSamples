@@ -1,9 +1,12 @@
-package com.kurosz.hibernatesamples;
+package com.kurosz.hibernatesamples.basic;
 
-import com.kurosz.hibernatesamples.repository.CountryRepository;
+import com.kurosz.hibernatesamples.basic.repository.CountryRepository;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.boot.test.system.CapturedOutput;
+import org.springframework.boot.test.system.OutputCaptureExtension;
 import org.springframework.test.context.jdbc.Sql;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

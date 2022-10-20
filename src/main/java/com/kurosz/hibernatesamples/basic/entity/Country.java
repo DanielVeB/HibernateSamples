@@ -1,4 +1,4 @@
-package com.kurosz.hibernatesamples.entity;
+package com.kurosz.hibernatesamples.basic.entity;
 
 import javax.persistence.*;
 
