@@ -1,17 +1,19 @@
-package com.kurosz.hibernatesamples.n1problem.entity;
+package com.kurosz.hibernatesamples.n1problem.fix.entity;
 
 import javax.persistence.*;
 
 @Entity
 @Table(name = "books")
-public class Book {
+@NamedEntityGraph(name = "books-author-graph",
+        attributeNodes = @NamedAttributeNode(value = "author"))
+public class FixedBook {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @ManyToOne
     @JoinColumn(name = "author_id")
-    private Author author;
+    private FixedAuthor author;
 
     private String title;
 
@@ -31,11 +33,11 @@ public class Book {
         this.title = title;
     }
 
-    public Author getAuthor() {
+    public FixedAuthor getAuthor() {
         return author;
     }
 
-    public void setAuthor(Author author) {
+    public void setAuthor(FixedAuthor author) {
         this.author = author;
     }
 

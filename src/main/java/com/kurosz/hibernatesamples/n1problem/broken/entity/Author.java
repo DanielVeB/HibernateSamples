@@ -1,4 +1,4 @@
-package com.kurosz.hibernatesamples.n1problem.entity;
+package com.kurosz.hibernatesamples.n1problem.broken.entity;
 
 import javax.persistence.*;
 import java.util.Set;
